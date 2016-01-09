@@ -1,0 +1,26 @@
+//IWD:EE Portrait Tweaks
+
+BACKUP ~iwd_portrait_variations/backup~
+AUTHOR ~in.eth@yandex.com~
+VERSION ~alpha3~
+
+/* --------------------------------------------------- */
+
+BEGIN ~Zoomed-in side bar portraits~ DESIGNATED 100
+
+COPY ~iwd_portrait_variations/zoomed~ ~override~
+
+/* --------------------------------------------------- */
+
+BEGIN ~Photoshopped variations~ DESIGNATED 200
+
+COPY ~iwd_portrait_variations/photoshopped/l~ ~override~
+ACTION_IF (MOD_IS_INSTALLED ~iwd_portrait_variations.tp2~ ~100~) THEN BEGIN
+  COPY ~iwd_portrait_variations/photoshopped/n~ ~override~
+END ELSE BEGIN
+  COPY ~iwd_portrait_variations/photoshopped/m~ ~override~
+END
+
+INCLUDE ~iwd_portrait_variations/photoshopped/patch_bgee_sql.tph~
+
+
