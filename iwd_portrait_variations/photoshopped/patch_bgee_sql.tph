@@ -8,12 +8,14 @@ COPY_EXISTING ~bgee.sql~ ~override/bgee.sql~
 	'hefci1_', 2,
 	'hefci2_', 2,
 	'hefci3_'~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'HMC2_'~ ~'HMC2_', 1,
+	'hmc2i1_'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'HFW3_'~ ~'HFW3_', 2,
 	'hfw3i1_'~
 
 /*
  * N.B.: Instead of all these REPLACE_TEXTUALLY actions, one could simply
- * append a single "INSERT INTO portraits ROWS (...);" block to the end of
+ * append a new "INSERT INTO portraits ROWS (...);" block to the end of
  * bgee.sql. However, the new portraits would then all appear at the end of
  * the portrait selection cycle in-game - and I want tweaked portraits to
  * appear right after the original portrait they are based on.
