@@ -1,71 +1,27 @@
-html, body {
-  background: #8F8B86;
-  color: #262121;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 11pt;
-  padding: 0;
-  margin: 0;
-}
-
-div.section {
-  background: #7A7772;
-  max-width: 1000px;
-  padding: 20px;
-  margin: 15px auto; /* The auto centers the div horizontally */
-}
-
-h1, h2, h3 {
-  color: #562911;
-}
-h1 {
-  font-size: 20pt;
-  margin: 0 0 0.5em 0;
-}
-h2 {
-  font-size: 15pt;
-  background: #696560;
-  margin: -10px -10px 1em -10px;
-  padding: 10px;
-}
-h3 {
-  font-size: 13pt;
-  font-style: italic;
-  margin: 1em 0;
-}
-
-p, table, ul, ol {
-  margin: 0 0 1em 0;
-}
-p:last-child, table:last-child, ul:last-child, ol:last-child {
-  margin-bottom: 0;
-}
-p + table, p + ul, p + ol {
-  margin-top: -0.5em;
-}
-
-table.compact {
-  border: none;
-}
-table.compact th, table.compact td {
-  border: none;
-  padding: 0 5px;
-  text-align: left;
-  vertical-align: top;
-}
-table.compact th {
-  font-weight: bold;
-}
-
-pre, code {
-  font-family: "Lucida Console", Monaco, monospace;
-  color: #444141;
-}
-small {
-  font-size: 0.8em;
-}
-a {
-  text-decoration: none;
-  color: #644900;
-}
+html, body { background: #9b9793; color: #262121; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height: 150%; padding: 0; margin: 0 }
+pre, code { font-family: Monaco, "Andale Mono", AndaleMono, "DejaVu Sans Mono", monospace; color: #444141; font-size: inherit }
+h1, h2, h3 { color: #4e240f }
+h1 { font-size: 34px; margin: 0 0 0.5em 0 }
+h2 { font-size: 22px; background: #77736d; margin: -10px -10px 1em -10px; padding: 10px }
+h3 { font-size: 18px; font-style: italic; margin: 1.2em 0 0.7em 0 }
+h4 { font-size: 14px; color:#111; border-bottom: solid 1px #625c59; margin: 1.1em 0 0.5em 0 }
+small { font-size: 0.8em }
+a { text-decoration: none; color: #644900 }
 a:hover { color: #723217 }
 a:active { color: #562612 }
+
+div.section { background: #8c8883; max-width: 1000px; padding: 20px; margin: 15px auto } /* The auto centers the div horizontally */
+
+p, table, ul, ol { margin: 0 0 1em 0 }
+p:last-child, table:last-child, ul:last-child, ol:last-child { margin-bottom: 0 }
+p + table, p + ul, p + ol { margin-top: -0.5em }
+
+table.compact { border: none }
+table.compact th, table.compact td { border: none; padding: 0 5px; text-align: left; vertical-align: top }
+table.compact th { font-weight: bold }
+
+table.grid { border-collapse: collapse }
+table.grid th, table.grid td { border: solid 1px #625c59 }
+table.grid th { background: #847f7b }
+
+div.diagram { background: #84807b; padding: 5px 5px 2px 5px }

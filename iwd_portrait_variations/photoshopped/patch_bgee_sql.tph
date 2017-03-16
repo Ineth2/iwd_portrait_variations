@@ -1,19 +1,21 @@
 COPY_EXISTING ~bgee.sql~ ~override/bgee.sql~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'EFF_'~ ~'EFF_', 2,
-	'effi1_'~
+	'x!eff_'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'HFF_'~ ~'HFF_', 2,
-	'hffi1_'~
+	'x!hffb_'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'2MBAR1_'~ ~'2MBAR1_', 1,
-	'2mbar1i', 1,
-	'2mbar1j'~
+	'x!2mb1_', 1,
+	'x!2mb1b'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'HEFC_'~ ~'HEFC_', 2,
-	'hefci1_', 2,
-	'hefci2_', 2,
-	'hefci3_'~
+	'x!hefcb', 2,
+	'x!hefcc', 2,
+	'x!hefcd'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'HMC2_'~ ~'HMC2_', 1,
-	'hmc2i1_'~
+	'x!hmc2_'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'HFW3_'~ ~'HFW3_', 2,
-	'hfw3i1_'~
+	'x!hfw3b'~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'GMT_'~ ~'GMT_', 1,
+	'x!gmtb_'~
 
 /*
  * N.B.: Instead of all these REPLACE_TEXTUALLY actions, one could simply

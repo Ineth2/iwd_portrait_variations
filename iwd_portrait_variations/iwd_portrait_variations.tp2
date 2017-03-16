@@ -2,7 +2,7 @@
 
 BACKUP ~iwd_portrait_variations/backup~
 AUTHOR ~in.eth@yandex.com~
-VERSION ~1.1~
+VERSION ~1.2~
 
 README ~iwd_portrait_variations/readme-%LANGUAGE%.html~
        ~iwd_portrait_variations/readme.html~
@@ -22,7 +22,7 @@ BEGIN @2 DESIGNATED 200  // Photoshopped variations
 
 COPY ~iwd_portrait_variations/photoshopped/l~ ~override~
 ACTION_IF (MOD_IS_INSTALLED ~iwd_portrait_variations.tp2~ ~100~) THEN BEGIN
-  COPY ~iwd_portrait_variations/photoshopped/n~ ~override~
+  COPY ~iwd_portrait_variations/photoshopped/m_zoomed~ ~override~
 END ELSE BEGIN
   COPY ~iwd_portrait_variations/photoshopped/m~ ~override~
 END
