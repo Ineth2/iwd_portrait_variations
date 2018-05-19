@@ -2,7 +2,7 @@
 
 BACKUP ~iwd_portrait_variations/backup~
 AUTHOR ~in.eth@yandex.com~
-VERSION ~1.2~
+VERSION ~1.3~
 
 README ~iwd_portrait_variations/readme-%LANGUAGE%.html~
        ~iwd_portrait_variations/readme.html~
@@ -20,11 +20,23 @@ COPY ~iwd_portrait_variations/zoomed~ ~override~
 
 BEGIN @2 DESIGNATED 200  // Photoshopped variations
 
+// Install the large (character-sheet) images:
 COPY ~iwd_portrait_variations/photoshopped/l~ ~override~
+
+
+// Install the small (side-bar) images:
 ACTION_IF (MOD_IS_INSTALLED ~iwd_portrait_variations.tp2~ ~100~) THEN BEGIN
   COPY ~iwd_portrait_variations/photoshopped/m_zoomed~ ~override~
 END ELSE BEGIN
   COPY ~iwd_portrait_variations/photoshopped/m~ ~override~
 END
 
-INCLUDE ~iwd_portrait_variations/photoshopped/patch_bgee_sql.tph~
+// Make them appear in the portrait selection screen (for IWD:EE 1.4):
+ACTION_IF (FILE_EXISTS_IN_GAME ~bgee.sql~) THEN BEGIN
+  INCLUDE ~iwd_portrait_variations/photoshopped/patch_sql.tph~
+END
+
+// Make them appear in the portrait selection screen (for IWD:EE 2.5):
+ACTION_IF (FILE_EXISTS_IN_GAME ~bgee.lua~) THEN BEGIN
+  INCLUDE ~iwd_portrait_variations/photoshopped/patch_lua.tph~
+END

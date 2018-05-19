@@ -1,3 +1,9 @@
+/*
+ * This WeiDU script patches the bgee.sql file bundled with IWD:EE v1.4,
+ * so that the added photoshopped portraits appear in the portrait
+ * selection screen (right after the corresponding original portraits).
+ */
+
 COPY_EXISTING ~bgee.sql~ ~override/bgee.sql~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'EFF_'~ ~'EFF_', 2,
 	'x!eff_'~
@@ -16,11 +22,3 @@ COPY_EXISTING ~bgee.sql~ ~override/bgee.sql~
 	'x!hfw3b'~
   REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~'GMT_'~ ~'GMT_', 1,
 	'x!gmtb_'~
-
-/*
- * N.B.: Instead of all these REPLACE_TEXTUALLY actions, one could simply
- * append a new "INSERT INTO portraits ROWS (...);" block to the end of
- * bgee.sql. However, the new portraits would then all appear at the end of
- * the portrait selection cycle in-game - and I want tweaked portraits to
- * appear right after the original portrait they are based on.
- */

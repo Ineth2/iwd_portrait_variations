@@ -1,0 +1,24 @@
+/*
+ * This WeiDU script patches the bgee.lua file bundled with IWD:EE v2.5,
+ * so that the added photoshopped portraits appear in the portrait
+ * selection screen (right after the corresponding original portraits).
+ */
+
+COPY_EXISTING ~bgee.lua~ ~override/bgee.lua~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'EFF_', 2}~ ~{'EFF_', 2},
+	{'x!eff_', 2}~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'HFF_', 2}~ ~{'HFF_', 2},
+	{'x!hffb_', 2}~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'2MBAR1_', 1}~ ~{'2MBAR1_', 1},
+	{'x!2mb1_', 1},
+	{'x!2mb1b', 1}~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'HEFC_', 2}~ ~{'HEFC_', 2},
+	{'x!hefcb', 2},
+	{'x!hefcc', 2},
+	{'x!hefcd', 2}~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'HMC2_', 1}~ ~{'HMC2_', 1},
+	{'x!hmc2_', 1}~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'HFW3_', 2}~ ~{'HFW3_', 2},
+	{'x!hfw3b', 2}~
+  REPLACE_TEXTUALLY CASE_INSENSITIVE EXACT_MATCH ~{'GMT_', 1}~ ~{'GMT_', 1},
+	{'x!gmtb_', 1}~

@@ -1,4 +1,4 @@
-html, body { background: #9b9793; color: #262121; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height: 150%; padding: 0; margin: 0 }
+html, body { background: #afaba6; color: #262121; font-family: Verdana, Geneva, sans-serif; font-size: 14px; line-height: 150%; padding: 0; margin: 0 }
 pre, code { font-family: Monaco, "Andale Mono", AndaleMono, "DejaVu Sans Mono", monospace; color: #444141; font-size: inherit }
 h1, h2, h3 { color: #4e240f }
 h1 { font-size: 34px; margin: 0 0 0.5em 0 }
@@ -10,7 +10,7 @@ a { text-decoration: none; color: #644900 }
 a:hover { color: #723217 }
 a:active { color: #562612 }
 
-div.section { background: #8c8883; max-width: 1000px; padding: 20px; margin: 15px auto } /* The auto centers the div horizontally */
+div.section { background: #96928d; max-width: 1000px; padding: 20px; margin: 15px auto } /* The auto centers the div horizontally */
 
 p, table, ul, ol { margin: 0 0 1em 0 }
 p:last-child, table:last-child, ul:last-child, ol:last-child { margin-bottom: 0 }
